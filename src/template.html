@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Escala 5x2 Queen Plaza</title>
+<link rel="icon" type="image/png" href="__FAVICON__">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -11,7 +12,7 @@
 /* Layout: faixa de navegação fixa, seções em coluna única de leitura (máx. 1080px), explorador de escala em grade rolável. Marca AMVS em verde-petróleo, turnos com cores próprias. */
 :root{
   --bg:#f3f6f7; --surface:#ffffff; --ink:#12212d; --muted:#586878; --line:#d9e2e7;
-  --brand:#0b5a63; --brand-ink:#ffffff; --brand-soft:#dcefef; --accent:#e0902b;
+  --brand:#0a3b80; --brand-ink:#ffffff; --brand-soft:#dfe8f6; --accent:#e0902b; --logo:#032f6c;
   --folga-bg:#e6ebef; --folga-fg:#4a5866;
   --n8-bg:#d3e5fb; --n8-fg:#17487f;
   --n9-bg:#e3d8f7; --n9-fg:#53339a;
@@ -22,7 +23,7 @@
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
   --bg:#0c1820; --surface:#13242e; --ink:#e8f0f3; --muted:#9db0bc; --line:#26404d;
-  --brand:#4fb8bf; --brand-ink:#08222a; --brand-soft:#17383f; --accent:#f0a64a;
+  --brand:#86b4f4; --brand-ink:#08182c; --brand-soft:#17304f; --accent:#f0a64a; --logo:#d3e3fb;
   --folga-bg:#26343e; --folga-fg:#b4c2cc;
   --n8-bg:#17365a; --n8-fg:#b9d7fb;
   --n9-bg:#35275f; --n9-fg:#d6c8f7;
@@ -31,7 +32,7 @@
   color-scheme:dark;}}
 :root[data-theme="dark"]{
   --bg:#0c1820; --surface:#13242e; --ink:#e8f0f3; --muted:#9db0bc; --line:#26404d;
-  --brand:#4fb8bf; --brand-ink:#08222a; --brand-soft:#17383f; --accent:#f0a64a;
+  --brand:#86b4f4; --brand-ink:#08182c; --brand-soft:#17304f; --accent:#f0a64a; --logo:#d3e3fb;
   --folga-bg:#26343e; --folga-fg:#b4c2cc;
   --n8-bg:#17365a; --n8-fg:#b9d7fb;
   --n9-bg:#35275f; --n9-fg:#d6c8f7;
@@ -56,7 +57,7 @@ section{padding:56px 0 8px}
 .nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--surface) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .nav .wrap{display:flex;align-items:center;gap:18px;height:56px}
 .brand{font:800 1.05rem var(--font-d);white-space:nowrap;display:flex;align-items:center;gap:8px}
-.brand i{width:26px;height:26px;border-radius:7px;background:var(--brand);color:var(--brand-ink);display:grid;place-items:center;font:800 .8rem var(--font-d);font-style:normal}
+.brand .logo-mark{width:32px}
 .nav ul{display:flex;gap:4px;list-style:none;margin:0 0 0 auto;padding:0;overflow-x:auto;scrollbar-width:none}
 .nav ul::-webkit-scrollbar{display:none}
 .nav li a{display:block;padding:8px 11px;border-radius:8px;text-decoration:none;color:var(--muted);font-weight:600;font-size:.92rem;white-space:nowrap}
@@ -249,21 +250,42 @@ td .n{font-weight:700;color:var(--ink)}
   body.print-ex main>section:not(#escala),body.print-ex header,body.print-ex #extras,body.print-ex #escala .lead,body.print-ex #escala .eyebrow{display:none!important}
 }
 
+.logo{display:block;background:var(--logo);-webkit-mask:var(--m) center/contain no-repeat;mask:var(--m) center/contain no-repeat}
+.logo-mark{--m:url(__LOGO_MARK__);width:30px;aspect-ratio:160/154;flex:none}
+.logo-full{--m:url(__LOGO_FULL__);width:150px;aspect-ratio:420/600}
+.herogrid{display:grid;grid-template-columns:1fr 250px;gap:36px;align-items:start}
+.herologo{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:26px 20px;display:grid;gap:16px;justify-items:center;text-align:center;position:sticky;top:76px}
+.herologo p{font-size:.9rem;color:var(--muted);line-height:1.4}
+.herologo p b{display:block;color:var(--ink);font:800 1rem var(--font-d)}
+.cobrand{display:none;align-items:center;gap:10px;margin-bottom:18px;font:700 .95rem var(--font-d)}
+.cobrand .logo-mark{width:38px}
+.cobrand span.x{color:var(--muted);font-weight:500}
+.signoff{display:flex;align-items:center;gap:14px;margin-top:22px;color:var(--muted);font-size:.95rem}
+.signoff .logo-mark{width:40px}
+.signoff b{color:var(--ink);display:block;font-family:var(--font-d)}
+footer .logo-mark{width:26px}
+footer .fb{display:flex;align-items:center;gap:10px}
+.printhead{display:none}
+@media (max-width:820px){.herogrid{grid-template-columns:1fr}.herologo{display:none}.cobrand{display:flex}}
+@media print{.printhead{display:flex;align-items:center;gap:14px;padding:0 0 10px;margin-bottom:6px;border-bottom:2px solid #032f6c}.printhead .logo-mark{width:48px}.printhead b{font:800 1.2rem var(--font-d);display:block}.printhead span{font-size:.95rem;color:#444}.herologo{position:static}}
+
 @media (max-width:820px){
   .opts{grid-template-columns:1fr}
   .ba{grid-template-columns:1fr}
   .weeknav{margin-left:0;width:100%;justify-content:space-between}
   .nav ul{margin-left:0}
-  .brand span{display:none}
+  .brand span:not(.logo){display:none}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
-<body>
+<body id="top">
+
+<div class="printhead"><span class="logo logo-mark" role="img" aria-label="Logo AMVS Facilities"></span><div><b>Escala 5x2 · Condomínio Queen Plaza</b><span>AMVS Facilities</span></div></div>
 
 <nav class="nav" aria-label="Seções">
   <div class="wrap">
-    <div class="brand"><i>A</i><span>AMVS Facilities</span></div>
+    <a class="brand" href="#top" style="text-decoration:none;color:inherit"><span class="logo logo-mark" role="img" aria-label="Logo AMVS Facilities"></span><span>AMVS Facilities</span></a>
     <ul>
       <li><a href="#resumo">Resumo</a></li>
       <li><a href="#mudanca">O que muda</a></li>
@@ -278,6 +300,8 @@ td .n{font-weight:700;color:var(--ink)}
 
 <header class="hero">
   <div class="wrap">
+  <div class="herogrid"><div class="heroleft">
+    <div class="cobrand"><span class="logo logo-mark" role="img" aria-label="Logo AMVS Facilities"></span><span>AMVS Facilities <span class="x">para o</span> Queen Plaza</span></div>
     <div class="eyebrow">AMVS Facilities · Condomínio Queen Plaza</div>
     <h1>Nova escala 5x2 da equipe do condomínio</h1>
     <p class="sub">Cada colaborador passa a ter <b>2 dias de folga em toda semana</b>, com <b>até 40 horas semanais</b> e <b>sem redução de salário</b>, sem deixar o Queen Plaza descoberto no sábado, no domingo ou no feriado.</p>
@@ -292,6 +316,9 @@ td .n{font-weight:700;color:var(--ink)}
       <p style="margin-top:4px">Fecha as 40h de todos, sem dia de 9 horas e sem depender de acordo extra. O plantão de fim de semana passa a ter 8 horas.</p></div>
       <a href="#opcoes">Comparar as 3 opções</a>
     </div>
+  </div>
+    <aside class="herologo" aria-label="Quem preparou"><span class="logo logo-full" role="img" aria-label="Logo AMVS Facilities"></span><p><b>AMVS Facilities</b>Escala preparada para o Condomínio Queen Plaza</p></aside>
+  </div>
   </div>
 </header>
 
@@ -593,6 +620,7 @@ td .n{font-weight:700;color:var(--ink)}
       <li><div><b>Apresentar à equipe</b><br><span style="color:var(--muted)">Mostrar a escala e combinar trocas de turno entre colegas.</span></div></li>
       <li><div><b>Começar a escala</b><br><span style="color:var(--muted)">Início previsto para 15/12/2026. O calendário vai até 30/05/2027 e pode ser estendido.</span></div></li>
     </ol>
+    <div class="signoff"><span class="logo logo-mark" role="img" aria-label="Logo AMVS Facilities"></span><div><b>AMVS Facilities</b>Gestão de facilities do Condomínio Queen Plaza</div></div>
     <div class="warnbox">Proposta feita com base na Emenda Constitucional 141. Confirme com o contador, o jurídico e a convenção coletiva da categoria antes de aplicar.</div>
   </div>
 </section>
@@ -600,7 +628,7 @@ td .n{font-weight:700;color:var(--ink)}
 
 <footer>
   <div class="wrap">
-    <span>AMVS Facilities · Condomínio Queen Plaza</span>
+    <span class="fb"><span class="logo logo-mark" role="img" aria-label="Logo AMVS Facilities"></span>AMVS Facilities · Condomínio Queen Plaza</span>
     <span>Escala 5x2 · 14/12/2026 a 30/05/2027</span>
   </div>
 </footer>
@@ -609,8 +637,8 @@ td .n{font-weight:700;color:var(--ink)}
 <script>
 const DATA = __DATA__;
 const PEOPLE = [
-  {n:'Leandro', r:'Zelador', g:'m', c:'#0b5a63'},
-  {n:'Guto', r:'Manutenção', g:'m', c:'#3b6fb6'},
+  {n:'Leandro', r:'Zelador', g:'m', c:'#032f6c'},
+  {n:'Guto', r:'Manutenção', g:'m', c:'#1f7a8c'},
   {n:'Cícero', r:'Limpeza', g:'l', c:'#a35b1d'},
   {n:'Valdirene', r:'Limpeza', g:'l', c:'#8a3d7a'},
   {n:'Alessandra', r:'Limpeza', g:'l', c:'#3f8a4e'}
