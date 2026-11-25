@@ -1,0 +1,141 @@
+<!--TITLE:Opções da escala-->
+<header class="pagehead"><div class="wrap"><h1>Opções e decisão</h1><p class="lead">O que muda, as três formas de fazer e o que falta decidir.</p></div></header>
+
+<main>
+<section id="mudanca">
+  <div class="wrap">
+    <div class="eyebrow">O que muda</div>
+    <h2>De 6 dias de trabalho para 5</h2>
+    <p class="lead">A Emenda Constitucional 141, promulgada em 16/10/2026, acaba com a escala 6x1. Hoje a equipe trabalha 6 dias e folga 1. Na nova regra são 5 dias de trabalho e 2 de folga, sem corte de salário.</p>
+    <div class="ba">
+      <div class="card">
+        <h3>Hoje: 6x1</h3>
+        <div class="week" id="weekBefore"></div>
+        <p class="total"><b>1 folga</b> por semana. Dias úteis de 8h e fim de semana de 4h.</p>
+      </div>
+      <div class="card" style="border-color:var(--brand)">
+        <h3>Depois: 5x2</h3>
+        <div class="week" id="weekAfter"></div>
+        <p class="total"><b>2 folgas</b> por semana. Exemplo de semana com plantão, na Opção 2.</p>
+      </div>
+    </div>
+    <div class="legend">
+      <span class="pill s-folga">Folga</span>
+      <span class="pill s-n8">8h–17h · 8 horas</span>
+      <span class="pill s-n9">8h–18h · 9 horas</span>
+      <span class="pill s-w4">Plantão · fim de semana ou feriado</span>
+    </div>
+    <p class="lead" style="margin-top:18px">Prazos da emenda: limite de <b>42h por semana</b> a partir de ~15/12/2026 e de <b>40h</b> a partir de ~dez/2027. Esta escala já nasce em 40h.</p>
+  </div>
+</section>
+
+<section id="equipe">
+  <div class="wrap">
+    <div class="eyebrow">Quem está na escala</div>
+    <h2>A equipe do Queen Plaza</h2>
+    <div class="team" id="team"></div>
+    <p class="lead" style="margin-top:16px">Todo sábado e todo domingo ficam no condomínio <b>1 pessoa da limpeza e 1 da manutenção</b>. A rotação é justa: todos pegam fins de semana em sequência fixa.</p>
+  </div>
+</section>
+
+<section id="opcoes">
+  <div class="wrap">
+    <div class="eyebrow">Três formas de fazer</div>
+    <h2>Compare as opções lado a lado</h2>
+    <p class="lead">As três respeitam 2 folgas por semana. A diferença está no tamanho do plantão de fim de semana e em quantas horas cada um cumpre nas semanas de plantão.</p>
+
+    <div class="opts">
+      <article class="card opt">
+        <span class="num">Opção 1</span>
+        <h3>Dias úteis mais longos</h3>
+        <div class="hrs">40h <small>nas semanas com plantão</small></div>
+        <div class="mini" aria-label="Exemplo de semana, Leandro">
+          <div class="s-folga">Seg<small>Folga</small></div>
+          <div class="s-n9">Ter<small>9h</small></div><div class="s-n9">Qua<small>9h</small></div><div class="s-n9">Qui<small>9h</small></div><div class="s-n9">Sex<small>9h</small></div>
+          <div class="s-w4">Sáb<small>4h</small></div><div class="s-folga">Dom<small>Folga</small></div>
+        </div>
+        <ul>
+          <li>Dias úteis em plantão: 8h às 18h</li>
+          <li>Fim de semana continua com 4h</li>
+          <li>Presença no condomínio pouco muda</li>
+        </ul>
+        <p class="why">Exige acordo de compensação por escrito, porque há dias de 9h.</p>
+      </article>
+
+      <article class="card opt rec">
+        <span class="tag">Recomendada</span>
+        <span class="num">Opção 2</span>
+        <h3>Plantão de 8 horas</h3>
+        <div class="hrs">40h <small>nas semanas com plantão</small></div>
+        <div class="mini" aria-label="Exemplo de semana, Leandro">
+          <div class="s-folga">Seg<small>Folga</small></div>
+          <div class="s-n8">Ter<small>8h</small></div><div class="s-n8">Qua<small>8h</small></div><div class="s-n8">Qui<small>8h</small></div><div class="s-n8">Sex<small>8h</small></div>
+          <div class="s-w4">Sáb<small>8h</small></div><div class="s-folga">Dom<small>Folga</small></div>
+        </div>
+        <ul>
+          <li>Todos os dias de 8h às 17h</li>
+          <li>Plantão de fim de semana de 8h às 17h</li>
+          <li>Nenhum dia passa de 8 horas</li>
+        </ul>
+        <p class="why">Mais simples juridicamente. Quem pega o fim de semana fica o dia todo.</p>
+      </article>
+
+      <article class="card opt">
+        <span class="num">Opção 3</span>
+        <h3>Mantém o plantão de 4h</h3>
+        <div class="hrs">36h <small>nas semanas com plantão</small></div>
+        <div class="mini" aria-label="Exemplo de semana, Leandro">
+          <div class="s-folga">Seg<small>Folga</small></div>
+          <div class="s-n8">Ter<small>8h</small></div><div class="s-n8">Qua<small>8h</small></div><div class="s-n8">Qui<small>8h</small></div><div class="s-n8">Sex<small>8h</small></div>
+          <div class="s-w4">Sáb<small>4h</small></div><div class="s-folga">Dom<small>Folga</small></div>
+        </div>
+        <ul>
+          <li>Dias úteis de 8h às 17h</li>
+          <li>Fim de semana continua com 4h</li>
+          <li>Menos horas trabalhadas nas semanas de plantão</li>
+        </ul>
+        <p class="why">Menor presença, mas fica 4h abaixo das 40h, e a equipe percebeu.</p>
+      </article>
+    </div>
+
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>O que olhar</th><th>Opção 1</th><th>Opção 2</th><th>Opção 3</th></tr></thead>
+        <tbody>
+          <tr><td>Horas na semana com plantão</td><td class="y">40h</td><td class="y">40h</td><td class="w">36h</td></tr>
+          <tr><td>Horas na semana sem plantão</td><td class="y">40h</td><td class="y">40h</td><td class="y">40h</td></tr>
+          <tr><td>Folgas por semana</td><td class="y">2</td><td class="y">2</td><td class="y">2</td></tr>
+          <tr><td>Maior dia de trabalho</td><td class="w">9h</td><td class="y">8h</td><td class="y">8h</td></tr>
+          <tr><td>Plantão de sábado ou domingo</td><td>4h (8h–12h)</td><td>8h (8h–17h)</td><td>4h (8h–12h)</td></tr>
+          <tr><td>Precisa de acordo escrito de compensação</td><td class="w">Sim</td><td class="y">Não</td><td class="y">Não</td></tr>
+          <tr><td>Equipe trabalhando menos que 40h</td><td class="y">Não</td><td class="y">Não</td><td class="n">Sim, nas semanas de plantão</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="lead" style="margin-top:14px">Semanas com feriado ficam abaixo de 40h nas três opções, porque o feriado é dia de descanso remunerado. O salário não muda.</p>
+    <div class="btnrow"><a class="btn primary" href="escala.html" style="text-decoration:none">Ver as escalas dia a dia</a><a class="btn" href="regras.html" style="text-decoration:none">Regras e feriados</a></div>
+  </div>
+</section>
+
+<section id="proximos">
+  <div class="wrap">
+    <div class="eyebrow">Para decidir</div>
+    <h2>Perguntas da síndica e da equipe</h2>
+    <details open><summary>O salário muda?</summary><p>Não. A emenda prevê a redução da jornada sem redução de salário.</p></details>
+    <details><summary>O condomínio fica sem cobertura em algum dia?</summary><p>Não. Em todas as semanas há 1 pessoa da limpeza e 1 da manutenção no sábado e no domingo, e a manutenção tem pelo menos 1 pessoa de segunda a sexta. A tabela "Escala dia a dia" mostra a cobertura de cada dia.</p></details>
+    <details><summary>Por que algumas semanas ficam abaixo de 40h?</summary><p>São semanas com feriado. O feriado é um dia de descanso remunerado, então a pessoa recebe como se tivesse trabalhado, mesmo com menos horas na semana.</p></details>
+    <details><summary>Por que recomendamos a Opção 2?</summary><p>Porque entrega 40h para todos, sem nenhum dia acima de 8 horas e sem precisar de acordo de compensação. O ponto de atenção é o plantão de fim de semana mais longo.</p></details>
+    <details><summary>E se a convenção coletiva disser outra coisa?</summary><p>A convenção prevalece. Se ela tratar de compensação, intervalo ou pagamento de feriado de forma diferente, ajustamos a escala antes de começar.</p></details>
+
+    <h3 style="margin-top:34px">Próximos passos</h3>
+    <ol class="steps">
+      <li><div><b>Escolher a opção</b><br><span style="color:var(--muted)">Síndica e AMVS Facilities decidem entre as opções 1, 2 e 3.</span></div></li>
+      <li><div><b>Validar com o contador e o jurídico</b><br><span style="color:var(--muted)">Conferir a convenção coletiva, feriados e, se for a Opção 1, o acordo de compensação.</span></div></li>
+      <li><div><b>Apresentar à equipe</b><br><span style="color:var(--muted)">Mostrar a escala e combinar trocas de turno entre colegas.</span></div></li>
+      <li><div><b>Começar a escala</b><br><span style="color:var(--muted)">Início previsto para 15/12/2026. O calendário vai até 30/05/2027 e pode ser estendido.</span></div></li>
+    </ol>
+    <div class="signoff"><span class="logo logo-mark" role="img" aria-label="Logo AMVS Facilities"></span><div><b>AMVS Facilities</b>Gestão de facilities do Condomínio Queen Plaza</div></div>
+    <div class="warnbox">Proposta feita com base na Emenda Constitucional 141. Confirme com o contador, o jurídico e a convenção coletiva da categoria antes de aplicar.</div>
+  </div>
+</section>
+</main>

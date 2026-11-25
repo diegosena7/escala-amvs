@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Regras e feriados</title>
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body id="top">
+<div class="printhead"><span class="logo logo-mark" role="img" aria-label="Logo AMVS Facilities"></span><div><b>Escala 5x2 · Condomínio Queen Plaza</b><span>AMVS Facilities</span></div></div>
+
+<nav class="nav" aria-label="Páginas">
+  <div class="wrap">
+    <a class="brand" href="index.html" style="text-decoration:none;color:inherit"><span class="logo logo-mark" role="img" aria-label="Logo AMVS Facilities"></span><span>AMVS Facilities</span></a>
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="escala.html">Escala</a></li>
+      <li><a href="opcoes.html">Opções</a></li>
+      <li><a href="regras.html" aria-current="page">Regras</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="pagehead"><div class="wrap"><h1>Regras e feriados</h1><p class="lead">Regras da escala, rodízio de fim de semana, feriados e glossário.</p></div></header>
+
+<main>
+<section id="regras">
+  <div class="wrap">
+    <div class="eyebrow">Regras da escala</div>
+    <h2>O que vale para todos</h2>
+    <div class="rules">
+      <div class="rule"><div class="n">1</div><div><b>2 folgas em toda semana</b><p>Ninguém trabalha mais de 5 dias seguidos.</p></div></div>
+      <div class="rule"><div class="n">2</div><div><b>Fim de semana sempre coberto</b><p>Sábado e domingo: 1 pessoa da limpeza e 1 da manutenção.</p></div></div>
+      <div class="rule"><div class="n">3</div><div><b>Manutenção sem buracos</b><p>Segunda só o Guto, terça só o Leandro, de quarta a sexta os dois.</p></div></div>
+      <div class="rule"><div class="n">4</div><div><b>Semana livre para a limpeza</b><p>Uma semana a cada três sem plantão: sábado e domingo de folga.</p></div></div>
+      <div class="rule"><div class="n">5</div><div><b>Rodízio fixo</b><p>A manutenção repete a cada 2 semanas e a limpeza a cada 3. O fim de semana fecha em ciclo de 6 semanas.</p></div></div>
+      <div class="rule"><div class="n">6</div><div><b>Salário não muda</b><p>Mesmo salário com jornada menor ou igual a 40h.</p></div></div>
+    </div>
+    <h3 style="margin-top:34px">Quem trabalha no fim de semana (ciclo de 6 semanas)</h3>
+    <p class="lead" style="margin-top:6px">Vale para as três opções. Depois da semana 6 o ciclo recomeça.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Semana</th><th>Limpeza sábado</th><th>Limpeza domingo</th><th>Manutenção sábado</th><th>Manutenção domingo</th></tr></thead>
+        <tbody id="rotbody"></tbody>
+      </table>
+    </div>
+    <h3 style="margin-top:34px">Glossário</h3>
+    <div class="gloss">
+      <details><summary>Plantão</summary><p>Dia em que a pessoa trabalha no sábado, no domingo ou em feriado, dentro do rodízio. Aparece em laranja na escala.</p></details>
+      <details><summary>5x2</summary><p>Cinco dias de trabalho e dois dias de folga em toda semana. Substitui o 6x1, com seis dias de trabalho e um de folga.</p></details>
+      <details><summary>Descanso semanal remunerado (DSR)</summary><p>É a folga paga. A EC 141 garante dois por semana, sendo um deles preferencialmente no domingo.</p></details>
+      <details><summary>Compensação de horas</summary><p>Trabalhar mais em um dia para trabalhar menos em outro, com acordo. A Opção 1 depende disso, porque tem dias de 9 horas.</p></details>
+      <details><summary>Semana livre</summary><p>Semana da limpeza sem plantão: sábado e domingo de folga, com 5 dias de 8 horas.</p></details>
+      <details><summary>Feriado em dia útil</summary><p>Na escala conta como fim de semana: trabalham 1 da limpeza e 1 da manutenção, e os demais folgam.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="feriados">
+  <div class="wrap">
+    <div class="eyebrow">Feriados</div>
+    <h2>Feriado conta como fim de semana</h2>
+    <p class="lead">No feriado trabalham 1 pessoa da limpeza e 1 da manutenção, e os demais folgam. Quem trabalha no feriado recebe em dobro ou ganha folga extra, conforme a convenção coletiva.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Data</th><th>Feriado</th><th>Como ficou na escala</th></tr></thead>
+        <tbody>
+          <tr><td>25/12/2026, sex</td><td>Natal</td><td>Plantão de limpeza e manutenção</td></tr>
+          <tr><td>01/01/2027, sex</td><td>Confraternização Universal</td><td>Plantão de limpeza e manutenção</td></tr>
+          <tr><td>25/01/2027, seg</td><td>Aniversário de São Paulo</td><td>Plantão de limpeza e manutenção</td></tr>
+          <tr><td>15 e 16/02/2027</td><td>Carnaval</td><td>Só marcado. Decidir pela convenção coletiva</td></tr>
+          <tr><td>26/03/2027, sex</td><td>Sexta-feira Santa</td><td>Plantão de limpeza e manutenção</td></tr>
+          <tr><td>21/04/2027, qua</td><td>Tiradentes</td><td>Plantão de limpeza e manutenção</td></tr>
+          <tr><td>01/05/2027, sáb</td><td>Dia do Trabalho</td><td>Cai no sábado, plantão normal</td></tr>
+          <tr><td>27/05/2027, qui</td><td>Corpus Christi</td><td>Só marcado. Confirmar se é feriado</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="fb"><span class="logo logo-mark" role="img" aria-label="Logo AMVS Facilities"></span>AMVS Facilities · Condomínio Queen Plaza</span>
+    <span class="flinks"><a href="index.html">Início</a><a href="escala.html">Escala</a><a href="opcoes.html">Opções</a><a href="regras.html">Regras</a></span>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="assets/data.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

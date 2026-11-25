@@ -1,0 +1,83 @@
+<!--TITLE:Escala dia a dia-->
+<header class="pagehead"><div class="wrap"><h1>Escala dia a dia</h1><p class="lead">Veja a semana, o mês de cada pessoa ou quem está no condomínio em um dia.</p></div></header>
+
+<main>
+<section id="escala">
+  <div class="wrap">
+
+
+    <div class="card explorer">
+      <div class="ex-head">
+        <div class="seg" id="optseg" role="group" aria-label="Opção">
+          <button type="button" data-opt="1" aria-pressed="false">Opção 1</button>
+          <button type="button" data-opt="2" aria-pressed="true">Opção 2</button>
+          <button type="button" data-opt="3" aria-pressed="false">Opção 3</button>
+        </div>
+        <div class="seg" id="viewseg" role="group" aria-label="Visão">
+          <button type="button" data-view="week" aria-pressed="true">Semana</button>
+          <button type="button" data-view="person" aria-pressed="false">Minha escala</button>
+          <button type="button" data-view="day" aria-pressed="false">Quem está no dia</button>
+        </div>
+        <button type="button" class="btn push" id="printBtn">Imprimir esta visão</button>
+      </div>
+
+      <div id="v-week">
+        <div class="ex-bar">
+          <div class="weeknav" style="margin-left:0">
+            <button type="button" id="prev" aria-label="Semana anterior">‹</button>
+            <div class="wl" id="wl" aria-live="polite"></div>
+            <button type="button" id="next" aria-label="Próxima semana">›</button>
+          </div>
+        </div>
+        <div class="gridscroll"><div class="sched" id="sched"></div></div>
+        <div class="cards" id="cards"></div>
+        <div class="ex-sum" id="exsum" style="padding-top:12px"></div>
+        <div class="ex-note" id="exnote"></div>
+      </div>
+
+      <div id="v-person" hidden>
+        <div class="pchips" id="pchips"></div>
+        <div class="ex-bar">
+          <div class="weeknav" style="margin-left:0">
+            <button type="button" id="mprev" aria-label="Mês anterior">‹</button>
+            <div class="wl" id="ml"></div>
+            <button type="button" id="mnext" aria-label="Próximo mês">›</button>
+          </div>
+          <span class="legendnote">Laranja com P = plantão. Contorno amarelo = feriado ou data especial.</span>
+        </div>
+        <div class="mcal" id="mcal"></div>
+        <div class="pinfo">
+          <div class="row" id="pstats"></div>
+          <p id="pnext"></p>
+          <div class="btnrow" style="margin-top:0"><button type="button" class="btn primary" id="copyPerson">Copiar escala para WhatsApp</button></div>
+          <div class="copybox" id="copybox2" hidden><p class="legendnote">Selecione o texto abaixo e copie.</p><textarea id="ta2" rows="9" readonly></textarea></div>
+        </div>
+      </div>
+
+      <div id="v-day" hidden>
+        <div class="dayctl">
+          <button type="button" class="btn" id="dprev" aria-label="Dia anterior">‹</button>
+          <input type="date" id="dayin" aria-label="Escolher o dia" min="2026-12-14" max="2027-05-30">
+          <button type="button" class="btn" id="dnext" aria-label="Próximo dia">›</button>
+          <button type="button" class="btn primary" id="dtoday">Hoje</button>
+        </div>
+        <div class="dayres" id="dayres" aria-live="polite"></div>
+      </div>
+    </div>
+
+    <div id="extras">
+    <h3 style="margin-top:34px">Mapa de horas por pessoa</h3>
+    <p class="lead" style="margin-top:6px">Cada quadrado é uma semana. Verde é 40h. Amarelo e vermelho são semanas com menos horas. Toque em um quadrado para ver a semana acima.</p>
+    <div class="heat"><div class="hm" id="hm"></div></div>
+    <div class="legend">
+      <span class="pill" style="background:var(--good-bg);color:var(--good-fg)">40h</span>
+      <span class="pill" style="background:var(--warn-bg);color:var(--warn-fg)">36h a 39h</span>
+      <span class="pill" style="background:var(--bad-bg);color:var(--bad-fg)">menos de 36h, semana com feriado</span>
+    </div>
+    <h3 style="margin-top:34px">Quantos fins de semana cada um trabalha</h3>
+    <p class="lead" style="margin-top:6px">Contagem nas 24 semanas da escala, para a opção escolhida acima. Feriado em dia útil entra como plantão.</p>
+    <div class="tablewrap"><table id="wkcount"></table></div>
+  </div>
+  </div>
+</section>
+</main>
